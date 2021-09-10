@@ -31,6 +31,7 @@ public class EquipPane extends ScrollPane {
         equipmentInfoPane.setBorder(null);
         ((VBox) equipmentInfoPane).setAlignment(Pos.CENTER);
         equipmentInfoPane.setPadding(new Insets(25, 10, 25, 125));
+//        equipmentInfoPane.setStyle("-fx-background-color:#CBAB90;");
         Label weaponLbl
 //                ,armorLbl
                 ;

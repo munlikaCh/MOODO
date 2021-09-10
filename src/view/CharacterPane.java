@@ -22,6 +22,7 @@ public class CharacterPane extends ScrollPane {
         Pane characterInfoPane = new VBox(10);
         characterInfoPane.setBorder(null);
         characterInfoPane.setPadding(new Insets(25, 25, 25, 25));
+//        characterInfoPane.setStyle("-fx-background-color:yellow;");
         Label name,type,hp,atk,def,res,Spd;
         ImageView mainImage = new ImageView();
         if (this.character != null) {

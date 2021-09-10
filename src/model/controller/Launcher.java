@@ -50,7 +50,7 @@ public class Launcher extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        primaryStage.setTitle("Intro to RPG");
+        primaryStage.setTitle("MOODO");
         primaryStage.setResizable(false);
         primaryStage.show();
         //--1.28
