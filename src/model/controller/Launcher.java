@@ -6,6 +6,7 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.Pane;
 import javafx.stage.Stage;
 import model.Character.BasedCharacter;
+import model.DamageType;
 import model.Item.Armor;
 import model.Item.BasedEquipment;
 //import model.Item.Bow;
@@ -14,6 +15,7 @@ import view.CharacterPane;
 import view.EquipPane;
 import view.InventoryPane;
 
+import java.awt.*;
 import java.util.ArrayList;
 
 public class Launcher extends Application {
@@ -50,6 +52,8 @@ public class Launcher extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+//        primaryStage.setImage("assets/Smile.png");
+
         primaryStage.setTitle("MOODO");
         primaryStage.setResizable(false);
         primaryStage.show();

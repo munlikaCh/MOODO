@@ -11,7 +11,7 @@ public class BattleMageCharacter extends BasedCharacter{
 //        this.type = DamageType.magical;
         this.imgpath = imgpath;
         this.fullHp = 40;
-        this.basedPow = 40;
+        this.basedPow = 0;
         this.basedDef = basedDef;
         this.basedRes = basedRes;
         this.hp = this.fullHp;

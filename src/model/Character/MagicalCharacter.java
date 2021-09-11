@@ -10,7 +10,7 @@ public class MagicalCharacter extends BasedCharacter {
         this.type = DamageType.magical;
         this.imgpath = imgpath;
         this.fullHp = 30;
-        this.basedPow = 50;
+        this.basedPow = 0;
         this.basedDef = basedDef;
         this.basedRes = basedRes;
         this.hp = this.fullHp;

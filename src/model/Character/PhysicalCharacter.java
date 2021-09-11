@@ -11,7 +11,7 @@ public class PhysicalCharacter extends BasedCharacter {
         this.type = DamageType.physical;
         this.imgpath = imgpath;
         this.fullHp = 50;
-        this.basedPow = 30;
+        this.basedPow = 0;
         this.basedDef = basedDef;
         this.basedRes = basedRes;
         this.hp = this.fullHp;
