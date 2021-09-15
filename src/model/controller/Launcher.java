@@ -14,6 +14,7 @@ import model.Item.Weapon;
 import view.CharacterPane;
 import view.EquipPane;
 import view.InventoryPane;
+import view.Text;
 
 import java.awt.*;
 import java.util.ArrayList;
@@ -27,6 +28,7 @@ public class Launcher extends Application {
     private static CharacterPane characterPane = null;
     private static EquipPane equipPane = null;
     private static InventoryPane inventoryPane = null;
+//    private static Text TextField = null;
 
     //
     public static ArrayList<BasedEquipment> getAllEquipments() {
@@ -53,7 +55,6 @@ public class Launcher extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
 //        primaryStage.setImage("assets/Smile.png");
-
         primaryStage.setTitle("MOODO");
         primaryStage.setResizable(false);
         primaryStage.show();
@@ -71,10 +72,12 @@ public class Launcher extends Application {
         characterPane = new CharacterPane();
         equipPane = new EquipPane();
         inventoryPane = new InventoryPane();
+//        TextField = new Text();
         refreshPane();
         mainPane.setBottom(characterPane);
         mainPane.setCenter(equipPane);
         mainPane.setTop(inventoryPane);
+//        mainPane.setBottom(TextField);
         return mainPane;
     }
     public static void refreshPane() {
@@ -83,6 +86,8 @@ public class Launcher extends Application {
 //                ,equippedArmor
         );
         inventoryPane.drawPane(allEquipments);
+//        TextField.drawPane();
+
     }
     public static BasedCharacter getMainCharacter() { return mainCharacter; }
     public static void setMainCharacter(BasedCharacter mainCharacter) {

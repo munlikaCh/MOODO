@@ -57,6 +57,7 @@ public class EquipPane extends ScrollPane {
 
         if (equippedWeapon != null) {
             weaponLbl = new Label("MOOD : "+equippedWeapon.getName());
+            weaponLbl.setStyle("-fx-text-fill:#855950;");
 
             weaponImg.setImage(new Image(getClass().getClassLoader().getResource(
                     equippedWeapon.getImagepath()).toString()));
@@ -65,7 +66,7 @@ public class EquipPane extends ScrollPane {
             //--------------
         } else {
             weaponLbl = new Label("MOOD :");
-
+            weaponLbl.setStyle("-fx-text-fill:#855950;");
             weaponImg.setImage(new Image(getClass().getClassLoader().getResource("assets/blank.png").toString()));
         }
 //        if (equippedArmor != null) {
@@ -107,6 +108,8 @@ public class EquipPane extends ScrollPane {
         // button
         Button unequip = new Button();
         unequip.setText("reset MOOD");
+        unequip.setStyle("-fx-background-color:#E4D9D3;"+"-fx-text-fill:#855950;");
+//        unequip.setStyle("-fx-text-fill:#855950;");
         unequip.setOnAction(new AllCustomHandler.unequip());
 
         //+++ add armorLbl, armorImgGroup,unequip +++
