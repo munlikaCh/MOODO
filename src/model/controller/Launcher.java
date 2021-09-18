@@ -19,7 +19,9 @@ import view.Text;
 import java.awt.*;
 import java.util.ArrayList;
 
+
 public class Launcher extends Application {
+
     private static Scene mainScene;
     private static BasedCharacter mainCharacter = null;
     private static ArrayList<BasedEquipment> allEquipments = null;
@@ -54,6 +56,7 @@ public class Launcher extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
+
 //        primaryStage.setImage("assets/Smile.png");
         primaryStage.setTitle("MOODO");
         primaryStage.setResizable(false);
@@ -65,6 +68,8 @@ public class Launcher extends Application {
         Pane mainPane = getMainPane();
         mainScene = new Scene(mainPane);
         primaryStage.setScene(mainScene);
+        // textbox
+        new MyFrame();
     }
 
     public Pane getMainPane() {
@@ -88,6 +93,7 @@ public class Launcher extends Application {
         inventoryPane.drawPane(allEquipments);
 //        TextField.drawPane();
 
+
     }
     public static BasedCharacter getMainCharacter() { return mainCharacter; }
     public static void setMainCharacter(BasedCharacter mainCharacter) {
@@ -95,5 +101,7 @@ public class Launcher extends Application {
     }
     public static void main(String[] args) {
         launch(args);
+
     }
+
 }
