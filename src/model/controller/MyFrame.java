@@ -1,5 +1,7 @@
 package model.controller;
 
+import javafx.scene.control.RadioButton;
+
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.FlowLayout;
@@ -9,6 +11,7 @@ import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JTextField;
+import javax.swing.text.Style;
 
 public class MyFrame extends JFrame implements ActionListener{
 
@@ -21,12 +24,15 @@ public class MyFrame extends JFrame implements ActionListener{
 
         button = new JButton("Submit");
         button.addActionListener(this);
+        button.setForeground(new Color( 0xFF855950,true));
+        button.setBackground(new Color(0xFFE4D9D3, true));
+
 
         textField = new JTextField();
         textField.setPreferredSize(new Dimension(250,40));
         textField.setFont(new Font("Consolas",Font.PLAIN,35));
         textField.setForeground(new Color(0xFF705A48, true));
-        textField.setBackground(Color.WHITE);
+        textField.setBackground(new Color(0xFFF4F4F4, true));
         textField.setCaretColor(Color.white);
         textField.setText("username");
 
