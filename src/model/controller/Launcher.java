@@ -1,5 +1,13 @@
 package model.controller;
 
+//import javafx.event.ActionEvent;
+//import javafx.fxml.FXML;
+//import javafx.scene.control.Button;
+//import javafx.scene.control.Label;
+//import javafx.scene.control.TextField;
+//import javafx.scene.image.Image;
+//import javafx.scene.image.ImageView;
+
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
@@ -16,11 +24,22 @@ import view.EquipPane;
 import view.InventoryPane;
 import view.Text;
 
+import javax.swing.*;
 import java.awt.*;
 import java.util.ArrayList;
 
 
 public class Launcher extends Application {
+
+
+//    @FXML
+//    private Label myLabel;
+//    @FXML
+//    private TextField myTextField;
+//    @FXML
+//    private Button myButton;
+//
+//    int age;
 
     private static Scene mainScene;
     private static BasedCharacter mainCharacter = null;
@@ -53,6 +72,26 @@ public class Launcher extends Application {
     public static void setEquippedArmor(Armor retrievedEquipment) {
         equippedArmor = retrievedEquipment;
     }
+
+//    public void submit(ActionEvent event) {
+//
+//        try {
+//            age = Integer.parseInt(myTextField.getText());
+//
+//            if(age >= 18) {
+//                myLabel.setText("You are now signed up!");
+//            }
+//            else {
+//                myLabel.setText("You must be 18+");
+//            }
+//        }
+//        catch (NumberFormatException e){
+//            myLabel.setText("enter only numbers plz");
+//        }
+//        catch (Exception e) {
+//            myLabel.setText("error");
+//        }
+//    }
 
     @Override
     public void start(Stage primaryStage) throws Exception{
