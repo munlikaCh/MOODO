@@ -27,7 +27,6 @@ public class InventoryPane extends ScrollPane {
         Pane inventoryInfoPane = new HBox(10);
         inventoryInfoPane.setBorder(null);
         inventoryInfoPane.setPadding(new Insets(25, 25, 25, 25));
-//        inventoryInfoPane.setStyle("-fx-background-color:yellow;");
         if (equipmentArray != null) {
             ImageView[] imageViewList = new ImageView[equipmentArray.size()];
             for (int i = 0; i < equipmentArray.size(); i++) {

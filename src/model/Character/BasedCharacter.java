@@ -34,12 +34,6 @@ public class BasedCharacter {
         }else {
             this.Spd = 50;
         }
-        //=======
-        //        if(weapon == null){
-//            power = basedPow;
-//        }else {
-//            power = this.basedPow + weapon.getPower();
-//        }
     }
     public void equipArmor( Armor armor) {
         this.armor = armor;

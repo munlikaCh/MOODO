@@ -40,9 +40,7 @@ public class AllCustomHandler {
             Launcher.setEquippedArmor(null);
             Launcher.setEquippedWeapon(null);
             Launcher.setAllEquipments(GenItemList.setUpItemList());
-//            unequip.unEquip();
             Launcher.refreshPane();
-//            Launcher.getpower(null);
         }
     }
     //=================

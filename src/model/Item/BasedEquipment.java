@@ -4,10 +4,7 @@ import javafx.scene.input.DataFormat;
 
 import java.io.Serializable;
 
-//-----------1.36---------
-//public class BasedEquipment {
 public class BasedEquipment implements Serializable {
-    //    public static final DataFormat DATA_FORMAT = null;
     public static final DataFormat DATA_FORMAT = new DataFormat("src.model.Item. BasedEquipment");
     protected String name;
     protected String imgpath;

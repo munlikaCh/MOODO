@@ -31,29 +31,17 @@ public class EquipPane extends ScrollPane {
         equipmentInfoPane.setBorder(null);
         ((VBox) equipmentInfoPane).setAlignment(Pos.CENTER);
         equipmentInfoPane.setPadding(new Insets(25, 10, 25, 125));
-//        equipmentInfoPane.setStyle("-fx-background-color:#CBAB90;");
-        Label weaponLbl
-//                ,armorLbl
-                ;
-
-        //---1.38---
+        Label weaponLbl;
         StackPane weaponImgGroup = new StackPane();
-//        StackPane armorImgGroup = new StackPane();
         ImageView bg1 = new ImageView();
         ImageView bg2 = new ImageView();
-        //----------
-
         ImageView weaponImg = new ImageView();
-//        ImageView armorImg = new ImageView();
 
-        //---1.38(2)---
         bg1.setImage(new Image(getClass().getClassLoader().getResource("assets/blank.png")
                 .toString()));
         bg2.setImage(new Image(getClass().getClassLoader().getResource("assets/blank.png")
                 .toString()));
         weaponImgGroup.getChildren().add(bg1);
-//        armorImgGroup.getChildren().add(bg2);
-        //-------------
 
         if (equippedWeapon != null) {
             weaponLbl = new Label("MOOD : "+equippedWeapon.getName());
@@ -61,68 +49,37 @@ public class EquipPane extends ScrollPane {
 
             weaponImg.setImage(new Image(getClass().getClassLoader().getResource(
                     equippedWeapon.getImagepath()).toString()));
-            //---1.38(3)---
             weaponImgGroup.getChildren().add(weaponImg);
-            //--------------
         } else {
             weaponLbl = new Label("MOOD :");
             weaponLbl.setStyle("-fx-text-fill:#855950;");
             weaponImg.setImage(new Image(getClass().getClassLoader().getResource("assets/blank.png").toString()));
         }
-//        if (equippedArmor != null) {
-//            armorLbl = new Label("Armor: \n"+equippedArmor.getName());
-//            armorImg.setImage(new Image(getClass().getClassLoader().getResource(
-//                    equippedArmor.getImagepath()).toString()));
-//            //---1.38(4)---
-//            armorImgGroup.getChildren().add(armorImg);
-//            //-------------
-//        } else {
-//            armorLbl = new Label("Armor:");
-//            armorImg.setImage(new Image(getClass().getClassLoader().getResource("assets/blank.png").toString()));
-//        }
-        //---1.38(5)---
         weaponImgGroup.setOnDragOver(new EventHandler<DragEvent>() {
             @Override
             public void handle(DragEvent e) {
                 onDragOver(e, "Weapon");
             }
         });
-//        armorImgGroup.setOnDragOver(new EventHandler<DragEvent>() {
-//            @Override
-//            public void handle(DragEvent e) {
-//                onDragOver(e, "Armor");
-//            }
-//        });
         weaponImgGroup.setOnDragDropped(new EventHandler<DragEvent>() {
             @Override
             public void handle(DragEvent e) {
                 onDragDropped(e, weaponLbl, weaponImgGroup);
             }
         });
-//        armorImgGroup.setOnDragDropped(new EventHandler<DragEvent>() {
-//            @Override
-//            public void handle(DragEvent e) {
-//                onDragDropped(e, armorLbl, armorImgGroup);
-//            }
-//        });
+
         // button
         Button unequip = new Button();
         unequip.setText("reset MOOD");
         unequip.setStyle("-fx-background-color:#E4D9D3;"+"-fx-text-fill:#855950;");
-//        unequip.setStyle("-fx-text-fill:#855950;");
         unequip.setOnAction(new AllCustomHandler.unequip());
-
-        //+++ add armorLbl, armorImgGroup,unequip +++
         equipmentInfoPane.getChildren().addAll(weaponLbl,weaponImgGroup
-//                ,armorLbl, armorImgGroup
                 ,unequip);
         return equipmentInfoPane;
     }
     public void drawPane(Weapon equippedWeapon
-//            , Armor equippedArmor
     ) {
         this.equippedWeapon = equippedWeapon;
-//        this.equippedArmor = equippedArmor;
         Pane equipmentInfo = getDetailsPane();
         this.setStyle("-fx-background-color:#F4F4F4;");
         this.setContent(equipmentInfo);
