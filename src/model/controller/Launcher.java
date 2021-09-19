@@ -103,8 +103,13 @@ public class Launcher extends Application {
         Launcher.mainCharacter = mainCharacter;
     }
     public static void main(String[] args) {
-        launch(args);
 
+        try{
+            System.out.println("==== Welcome to MOODO ====");
+            launch(args);
+        }catch (Exception ee){
+            System.out.println(ee);
+        }
+        System.out.println("See you later :')");
     }
-
 }
