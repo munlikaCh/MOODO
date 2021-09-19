@@ -31,6 +31,7 @@ public class CharacterPane extends ScrollPane {
         Label name,type,hp,atk,def,res,Spd;
         ImageView mainImage = new ImageView();
         if (this.character != null) {
+            //get mood
             name = new Label("Name: "+character.getName());
             mainImage.setImage(new Image(getClass().getClassLoader().getResource(
                     character.getImagepath()).toString()));

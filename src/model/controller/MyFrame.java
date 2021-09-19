@@ -11,6 +11,9 @@ import javax.swing.*;
 import javax.swing.text.Style;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextInputDialog;
+import javafx.scene.image.Image;
+import model.Item.Weapon;
+import view.EquipPane;
 
 public class MyFrame extends JFrame implements ActionListener{
 
@@ -36,11 +39,11 @@ public class MyFrame extends JFrame implements ActionListener{
 
         textField = new JTextField();
         textField.setPreferredSize(new Dimension(250,40));
-        textField.setFont(new Font("Consolas",Font.PLAIN,35));
+        textField.setFont(new Font("Consolas",Font.PLAIN,14));
         textField.setForeground(new Color(0xFF705A48, true));
         textField.setBackground(new Color(0xFFF4F4F4, true));
         textField.setCaretColor(Color.white);
-        //textField.setText(" ");
+        textField.setText("Tell me about your story today!!");
 
         JPanel p = new JPanel();
 
@@ -65,13 +68,13 @@ public class MyFrame extends JFrame implements ActionListener{
         }
     @Override
     public void actionPerformed(ActionEvent e) {
-
         if(e.getSource()==button) {
+
             // set the text of the label to the text of the field
-            l.setText(textField.getText());
+            l.setText("Your story : "+textField.getText());
 
             // set the text of field to blank
-            textField.setText("  ");
+            textField.setText("");
         }
     }
 //        if(e.getSource()==button) {
