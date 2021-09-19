@@ -1,22 +1,17 @@
 package model.controller;
-// Java program to create a blank text
-// field of definite number of columns.
+
 import java.awt.event.*;
 import javax.swing.*;
+
 class text extends JFrame implements ActionListener {
-    // JTextField
     static JTextField t;
 
-    // JFrame
     static JFrame f;
 
-    // JButton
     static JButton b;
 
-    // label to display text
     static JLabel l;
 
-    // default constructor
     text()
     {
     }

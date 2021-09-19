@@ -17,11 +17,9 @@ public class GenCharacter {
         //=======
 
         if (type == 1) {
-            //++++childe++++
             character = new BattleMageCharacter("Childe", "assets/childe.png", basedDef, basedRes, basedSpd);
 
         }else {
-            //++++childe++++
             character = new BattleMageCharacter("Childe", "assets/childe.png", basedDef, basedRes, basedSpd);
 
         }
