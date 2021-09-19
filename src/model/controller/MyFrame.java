@@ -68,14 +68,19 @@ public class MyFrame extends JFrame implements ActionListener{
         }
     @Override
     public void actionPerformed(ActionEvent e) {
-        if(e.getSource()==button) {
+        try {
+            if(e.getSource()==button) {
 
-            // set the text of the label to the text of the field
-            l.setText("Your story : "+textField.getText());
+                // set the text of the label to the text of the field
+                l.setText("Your story : "+textField.getText());
 
-            // set the text of field to blank
+                // set the text of field to blank
+                textField.setText("");
+            }
+        }catch (Exception getS){
             textField.setText("");
         }
+
     }
 //        if(e.getSource()==button) {
 //            l.setText("Welcome "+ textField.getText());
