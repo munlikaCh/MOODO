@@ -22,7 +22,6 @@ import model.Item.Weapon;
 import view.CharacterPane;
 import view.EquipPane;
 import view.InventoryPane;
-import view.Text;
 
 import javax.swing.*;
 import java.awt.*;
@@ -30,16 +29,6 @@ import java.util.ArrayList;
 
 
 public class Launcher extends Application {
-
-
-//    @FXML
-//    private Label myLabel;
-//    @FXML
-//    private TextField myTextField;
-//    @FXML
-//    private Button myButton;
-//
-//    int age;
 
     private static Scene mainScene;
     private static BasedCharacter mainCharacter = null;

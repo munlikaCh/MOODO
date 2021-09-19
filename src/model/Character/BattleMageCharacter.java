@@ -5,10 +5,7 @@ import model.DamageType;
 public class BattleMageCharacter extends BasedCharacter{
     public BattleMageCharacter(String name, String imgpath, int basedDef, int basedRes,int basedSpd){
         this.name = name;
-        //+++ new character type namely battlemage +++
-        //===fullHp,basedPow = 40===
         this.type = DamageType.damage;
-//        this.type = DamageType.magical;
         this.imgpath = imgpath;
         this.fullHp = 40;
         this.basedPow = 0;

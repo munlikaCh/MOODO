@@ -3,12 +3,10 @@ package model.Character;
 import model.DamageType;
 import model.Item.Armor;
 import model.Item.Weapon;
-//import model.Item.Bow;
 
 public class BasedCharacter {
     protected String name, imgpath;
     protected DamageType type;
-    //    protected Integer fullHp, basedDef, basedDef, basedRes;
     protected Integer fullHp, basedDef,basedPow, basedRes,basedSpd;
     protected Integer hp, power, defense, resistance,Spd;
     protected Weapon weapon;
@@ -27,7 +25,6 @@ public class BasedCharacter {
     }
     //====
 
-    //-----1.40------
     public void equipWeapon(Weapon weapon) {
         this.weapon = weapon;
         this.power = this.basedPow + weapon.getPower();
@@ -49,7 +46,6 @@ public class BasedCharacter {
         this.defense = this.basedDef + armor.getDefense();
         this.resistance = this.basedRes + armor.getResistance();
     }
-    //---------------
 
 
     @Override
