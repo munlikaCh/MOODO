@@ -26,7 +26,7 @@ public class MyFrame extends JFrame implements ActionListener{
 //        this.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //        this.setLayout(new FlowLayout());
 
-        f = new JFrame();
+        f = new JFrame("Tell me about your story today!!");
         l = new JLabel();
         text te = new text();
 
@@ -43,7 +43,7 @@ public class MyFrame extends JFrame implements ActionListener{
         textField.setForeground(new Color(0xFF705A48, true));
         textField.setBackground(new Color(0xFFF4F4F4, true));
         textField.setCaretColor(Color.white);
-        textField.setText("Tell me about your story today!!");
+        //textField.setText("Tell me about your story today!!");
 
         JPanel p = new JPanel();
 
@@ -55,7 +55,7 @@ public class MyFrame extends JFrame implements ActionListener{
         f.add(p);
 
         // set the size of frame
-        f.setSize(300, 300);
+        f.setSize(400, 300);
 
         f.setVisible(true);
 
