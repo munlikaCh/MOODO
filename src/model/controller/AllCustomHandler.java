@@ -8,6 +8,7 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.*;
 import javafx.scene.layout.StackPane;
 import model.Character.BasedCharacter;
+import model.Character.BattleMageCharacter;
 import model.DamageType;
 import model.Item.Armor;
 import model.Item.BasedEquipment;

@@ -18,4 +18,5 @@ public class BattleMageCharacter extends BasedCharacter{
         this.basedSpd = basedSpd;
         this.Spd = basedSpd;
     }
+
 }

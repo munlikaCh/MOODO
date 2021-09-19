@@ -17,7 +17,6 @@ import model.Character.BasedCharacter;
 import model.DamageType;
 import model.Item.Armor;
 import model.Item.BasedEquipment;
-//import model.Item.Bow;
 import model.Item.Weapon;
 import view.CharacterPane;
 import view.EquipPane;
@@ -38,9 +37,7 @@ public class Launcher extends Application {
     private static CharacterPane characterPane = null;
     private static EquipPane equipPane = null;
     private static InventoryPane inventoryPane = null;
-//    private static Text TextField = null;
 
-    //
     public static ArrayList<BasedEquipment> getAllEquipments() {
         return allEquipments;
     }
@@ -54,7 +51,7 @@ public class Launcher extends Application {
         Launcher.allEquipments = allEquipments;
     }
 
-    //-----Add ค่าเอง
+    //-----Add
     public static void setEquippedWeapon(Weapon retrievedEquipment) {
         equippedWeapon = retrievedEquipment;
     }
@@ -62,40 +59,20 @@ public class Launcher extends Application {
         equippedArmor = retrievedEquipment;
     }
 
-//    public void submit(ActionEvent event) {
-//
-//        try {
-//            age = Integer.parseInt(myTextField.getText());
-//
-//            if(age >= 18) {
-//                myLabel.setText("You are now signed up!");
-//            }
-//            else {
-//                myLabel.setText("You must be 18+");
-//            }
-//        }
-//        catch (NumberFormatException e){
-//            myLabel.setText("enter only numbers plz");
-//        }
-//        catch (Exception e) {
-//            myLabel.setText("error");
-//        }
-//    }
-
     @Override
     public void start(Stage primaryStage) throws Exception{
 
-//        primaryStage.setImage("assets/Smile.png");
         primaryStage.setTitle("MOODO");
         primaryStage.setResizable(false);
         primaryStage.show();
-        //--1.28
+
         mainCharacter = GenCharacter.setUpCharacter();
         allEquipments = GenItemList.setUpItemList();
 
         Pane mainPane = getMainPane();
         mainScene = new Scene(mainPane);
         primaryStage.setScene(mainScene);
+
         // textbox
         new MyFrame();
     }
@@ -105,12 +82,12 @@ public class Launcher extends Application {
         characterPane = new CharacterPane();
         equipPane = new EquipPane();
         inventoryPane = new InventoryPane();
-//        TextField = new Text();
+
         refreshPane();
         mainPane.setBottom(characterPane);
         mainPane.setCenter(equipPane);
         mainPane.setTop(inventoryPane);
-//        mainPane.setBottom(TextField);
+
         return mainPane;
     }
     public static void refreshPane() {
@@ -119,10 +96,8 @@ public class Launcher extends Application {
 //                ,equippedArmor
         );
         inventoryPane.drawPane(allEquipments);
-//        TextField.drawPane();
-
-
     }
+
     public static BasedCharacter getMainCharacter() { return mainCharacter; }
     public static void setMainCharacter(BasedCharacter mainCharacter) {
         Launcher.mainCharacter = mainCharacter;
