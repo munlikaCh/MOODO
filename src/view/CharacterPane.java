@@ -27,15 +27,13 @@ public class CharacterPane extends ScrollPane {
         Pane characterInfoPane = new VBox(10);
         characterInfoPane.setBorder(null);
         characterInfoPane.setPadding(new Insets(25, 10, 25, 110));
-        Label name,type,hp,atk,def,res,Spd;
+        Label name,atk;
         ImageView mainImage = new ImageView();
         if (this.character != null) {
             //get mood
             name = new Label("Name: "+character.getName());
             mainImage.setImage(new Image(getClass().getClassLoader().getResource(
                     character.getImagepath()).toString()));
-            hp = new Label("HP: "+character.getHp().toString()+"/"+character.
-                    getFullHp().toString());
             atk = new Label("Mutelu: "+character.getPower()); //from ATK
         } else {
             name = new Label("Name: ");

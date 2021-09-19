@@ -18,6 +18,5 @@ public class GenItemList {
             itemLists.add(new Weapon("ANGRY",60,DamageType.magical,"assets/Angry.png"));
             itemLists.add(new Weapon("SICK", 1,DamageType.magical, "assets/Sick.png"));
         return itemLists;
-
     }
 }

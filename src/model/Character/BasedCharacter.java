@@ -1,8 +1,12 @@
 package model.Character;
 
+import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import model.DamageType;
 import model.Item.Armor;
 import model.Item.Weapon;
+import model.controller.GenItemList;
+import model.controller.Launcher;
 
 public class BasedCharacter {
     protected String name, imgpath;
@@ -41,10 +45,8 @@ public class BasedCharacter {
         this.resistance = this.basedRes + armor.getResistance();
     }
 
-
     @Override
     public String toString() { return name; }
-
 
     public DamageType getType() {
         return type;

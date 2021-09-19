@@ -12,16 +12,17 @@ import javafx.scene.input.DragEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
+import model.Character.BasedCharacter;
 import model.Item.Armor;
 import model.Item.Weapon;
 import model.controller.AllCustomHandler;
+import model.controller.Launcher;
 
 import static model.controller.AllCustomHandler.onDragOver;
 import static model.controller.AllCustomHandler.onDragDropped;
 
 public class EquipPane extends ScrollPane {
     private Weapon equippedWeapon;
-//    private Armor equippedArmor;
 
     public EquipPane() {
     }
@@ -34,12 +35,9 @@ public class EquipPane extends ScrollPane {
         Label weaponLbl;
         StackPane weaponImgGroup = new StackPane();
         ImageView bg1 = new ImageView();
-        ImageView bg2 = new ImageView();
         ImageView weaponImg = new ImageView();
 
         bg1.setImage(new Image(getClass().getClassLoader().getResource("assets/blank.png")
-                .toString()));
-        bg2.setImage(new Image(getClass().getClassLoader().getResource("assets/blank.png")
                 .toString()));
         weaponImgGroup.getChildren().add(bg1);
 
